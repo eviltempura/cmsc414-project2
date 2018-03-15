@@ -1,0 +1,4 @@
+I can't think of a way to break read.c. However, substring.c is insecure
+becuase the author used sscanf improperly. sscanf could take format
+strings that specify the length of string to be taken in, but the
+author simply used %s instead which could lead to buffer overflow.

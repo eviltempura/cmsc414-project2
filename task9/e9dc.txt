@@ -1,0 +1,4 @@
+I can't find a way to break read.c. However, I find a buffer overflow
+vulnerability in substring.c. The author used scanf() without
+specifying the length of the string in the formatting which could lead
+to buffer overflow.

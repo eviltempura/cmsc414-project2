@@ -1,0 +1,9 @@
+read.c is not secure because even though the author made the buffer
+relatively large (512 bytes) the code is still vulnerable to buffer
+overflow due to the fact that string size is not specified while
+reading into the buffer.
+
+substring.c is also not secure. The author implemented a buffer to dump
+excessive characters in the input. However, when reading into this dump
+buffer, string size is not specified which indicates a buffer overflow
+vulnerability.
